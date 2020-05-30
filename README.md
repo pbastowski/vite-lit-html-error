@@ -12,3 +12,14 @@
 
 4. Next, run the `vite` npm task and notice (in the browser) how it fails where the repeat directive is used.
 
+## The Fix
+
+Add `vue.config.js` in the root of your project with the following contents
+
+```js
+module.exports = {
+    optimizeDeps: {
+        exclude: ['lit-html']
+    }
+}
+```
